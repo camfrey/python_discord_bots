@@ -27,7 +27,7 @@ async def on_message(message):
         elif (word[wordlen-1]=='r' or word[wordlen-1]=='R') and (word[wordlen-2]=='e' or word[wordlen-2]=='E'):
             resp = resp + word[:wordlen-2] +" her? I don't even know her!"
         # print(resp)
-        if((word[wordlen-1]=='a') or (word[wordlen-1]=='A')) or ((word[wordlen-1]=='r' or word[wordlen-1]=='R') and (word[wordlen-2]=='e' or word[wordlen-2]=='E')):
+        if(word=='liquor' or (word[wordlen-1]=='a') or (word[wordlen-1]=='A')) or ((word[wordlen-1]=='r' or word[wordlen-1]=='R') and (word[wordlen-2]=='e' or word[wordlen-2]=='E')):
             await message.channel.send(resp)
 
         # await message.channel.send(word)
