@@ -20,7 +20,9 @@ async def on_message(message):
         print(word)
         if(wordlen<=2):
             continue
-        if (word[wordlen-1]=='a') or (word[wordlen-1]=='A'):
+        if(word=='liquor'):
+            resp = resp + "lick her? I don't even know her!"
+        elif (word[wordlen-1]=='a') or (word[wordlen-1]=='A'):
             resp = resp + word[:wordlen-1]+"er? I don't even know her!"
         elif (word[wordlen-1]=='r' or word[wordlen-1]=='R') and (word[wordlen-2]=='e' or word[wordlen-2]=='E'):
             resp = resp + word[:wordlen-2] +" her? I don't even know her!"
@@ -33,4 +35,4 @@ async def on_message(message):
     if message.content.startswith('$hello'):
         await message.channel.send('Hello!')
 
-client.run('Nzc3NzIwNDg4OTM1Njg2MTU1.X7HipQ.vSsdnFF9m4el_91lTS_XL62C8qg')
+client.run('')
